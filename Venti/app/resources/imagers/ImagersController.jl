@@ -3,6 +3,7 @@ module ImagersController
 using Genie.Renderer.Html
 using Images,TestImages
 using Genie.Renderer
+using Genie.Router
 struct Book
   title::String
   author::String
@@ -36,16 +37,18 @@ end
 function threshold()
   println("threshold")
   # What thresholding algorithm the user has chosen. WORKS
-  # algorithm = params(:algorithm)
+  algorithm = @params(:algorithm)
 
   # # The image that the user has uploaded. ERROR IS HERE
-  # img = params(:image)
+  #img = @params(:image)
   result =1;
   algorithm=1;
   img=testimage("lighthouse")
-  save("appe.png",img)
+  # save("appe.png",img)
   println("Test Pass 2")
-  html(:imagers, :threshold, res = result,image ="appe.png", alg=algorithm)
+  data ="appe.png"
+  println(pwd())
+  html(:imagers, :threshold, res = result,image =data, alg=algorithm)
 end
 # # BooksController.jl
 # function billgatesbooks()
