@@ -2,6 +2,7 @@ module ImagersController
 # app/resources/books/BooksController.jl
 using Genie.Renderer.Html
 using Images,TestImages
+using Genie.Renderer
 struct Book
   title::String
   author::String
@@ -24,10 +25,28 @@ const BillGatesBooks = Book[
 #   "
 # end
 
-# function billgatesbooks()
-#   html(:books, :billgatesbooks, books = BillGatesBooks)
-# end
+function upload_img()
 
+end
+
+function billgatesbooks()
+  html(:imagers, :billgatesbooks, books = BillGatesBooks)
+end
+
+function threshold()
+  println("threshold")
+  # What thresholding algorithm the user has chosen. WORKS
+  # algorithm = params(:algorithm)
+
+  # # The image that the user has uploaded. ERROR IS HERE
+  # img = params(:image)
+  result =1;
+  algorithm=1;
+  img=testimage("lighthouse")
+  save("appe.png",img)
+  println("Test Pass 2")
+  html(:imagers, :threshold, res = result,image ="appe.png", alg=algorithm)
+end
 # # BooksController.jl
 # function billgatesbooks()
 #   html(:books, "billgatesbooks.jl.md", books = BillGatesBooks)
@@ -37,20 +56,20 @@ function showimg()
    img= testimage("lighthouse")
 end
 
-function billgatesbooks1()
+# function billgatesbooks1()
   
-  [
-    Html.h1() do
-      "Image Restoration"
-    end
-    Html.ul() do
-      @foreach(BillGatesBooks) do book
-        Html.li() do
-          book.title * " by 1 " * book.author
-        end
-      end
-    end
-  ]
-end
+#   [
+#     Html.h1() do
+#       "Image Restoration"
+#     end
+#     Html.ul() do
+#       @foreach(BillGatesBooks) do book
+#         Html.li() do
+#           book.title * " by 1 " * book.author
+#         end
+#       end
+#     end
+#   ]
+# end
 
 end

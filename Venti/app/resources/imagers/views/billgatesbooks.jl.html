@@ -5,3 +5,15 @@
         <li>$(book.title) by $(book.author)</li>
         <% end %>
 </ul>
+
+<form action="$(Genie.Router.link_to(:threshold_img))" method="POST" enctype="multipart/form-data">
+
+    <input type="radio" name="algorithm" value="otsu" checked/>Otsu<br/>
+    <input type="radio" name="algorithm" value="unimodal" checked/>Unimodal<br/>
+    <input type="radio" name="algorithm" value="minimum" checked/>Minimum<br/>
+
+    <p><input type="file" accept="image/*" name="image" id="file"></p>
+
+
+    <input type="submit" value="Threshold Image" />
+</form>

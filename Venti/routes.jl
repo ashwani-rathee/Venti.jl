@@ -1,10 +1,9 @@
 using Genie.Router
 using Genie.Renderer
 using Genie.Renderer.Html
-using BooksController
 using ImagersController
 
-route("/", ImagersController.billgatesbooks1)
+route("/", ImagersController.billgatesbooks)
 # route("/bgbooks", BooksController.billgatesbooks)
 
 # route("/") do
@@ -15,3 +14,7 @@ route("/", ImagersController.billgatesbooks1)
 route("/hello") do
   "Welcome to Genie!"
 end
+
+route("/upload_img", ImagersController.upload_img)
+
+route("/threshold", ImagersController.threshold, method = POST, named = :threshold_img)
