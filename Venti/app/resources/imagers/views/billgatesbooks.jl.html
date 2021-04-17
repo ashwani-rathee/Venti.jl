@@ -1,10 +1,10 @@
 <!-- billgatesbooks.jl.html -->
-<h1>Bill Gates' top $(length(books)) recommended books</h1>
-<ul>
+<h1>Image Restoration Tool Kit</h1>
+<!-- <ul>
     <% @foreach(books) do book %>
         <li>$(book.title) by $(book.author)</li>
         <% end %>
-</ul>
+</ul> -->
 
 <form action="$(Genie.Router.link_to(:threshold_img))" method="POST" enctype="multipart/form-data">
 

@@ -48,7 +48,7 @@ function threshold()
   println("Test Pass 2")
   data ="appe.png"
   println(pwd())
-  html(:imagers, :threshold, res = result,image =data, alg=algorithm)
+  html(:imagers, :threshold, res = result,image =img, alg=algorithm)
 end
 # # BooksController.jl
 # function billgatesbooks()
