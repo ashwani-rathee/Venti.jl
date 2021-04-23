@@ -1,0 +1,61 @@
+<!-- billgatesbooks.jl.html -->
+<!-- <h1 style="color:blue;">Image Restoration Tool Kit</h1> -->
+<!-- <ul>
+    <% @foreach(books) do book %>
+        <li>$(book.title) by $(book.author)</li>
+        <% end %>
+</ul> -->
+<!-- <% 
+    img = "/img/") 
+%>
+    <h1>$(img1) h</h1>
+    <h1>Hello</h1> -->
+<form action="$(Genie.Router.link_to(:index))" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <div class="col">
+            <h1 style="font-size: 40px;">Package Tools</h1>
+            <!-- <ul>
+                <li>ImageBinarization.jl
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                        <li>Item 4</li>
+                    </ul>
+                </li>
+            </ul> -->
+            <ul>
+                <li>ImageMorphology.jl</li>
+            </ul>
+
+            <div class="form-check" style="margin-left: 57px;margin-top: -15px;"><input class="form-check-input" name="algorithm" type="radio" id="formCheck-1" value="erosion" checked/><label class="form-check-label" for="formCheck-1">Erosion</label></div>
+            <div class="form-check" style="margin-left: 57px;margin-top: 0;"><input class="form-check-input" name="algorithm" type="radio" id="formCheck-3" value="dilation" checked/><label class="form-check-label" for="formCheck-1">Dilation</label></div>
+            <div class="form-check" style="margin-left: 57px;margin-top: 0;"><input class="form-check-input" name="algorithm" type="radio" id="formCheck-2" value="opening" checked/><label class="form-check-label" for="formCheck-1">Opening</label></div>
+            <div class="form-check" style="margin-left: 57px;margin-top: 0;"><input class="form-check-input" name="algorithm" type="radio" id="formCheck-1" value="closing" checked/><label class="form-check-label" for="formCheck-1">Closing</label></div>
+            <div class="form-check" style="margin-left: 57px;margin-top: 0;"><input class="form-check-input" name="algorithm" type="radio" id="formCheck-5" value="tophat" checked/><label class="form-check-label" for="formCheck-1">TopHat</label></div>
+            <div class="form-check" style="margin-left: 57px;margin-top: 0;"><input class="form-check-input" name="algorithm" type="radio" id="formCheck-4" value="bothat" checked/><label class="form-check-label" for="formCheck-1">BotHat</label></div>
+            <div class="form-check" style="margin-left: 57px;margin-top: 0;"><input class="form-check-input" name="algorithm" type="radio" id="formCheck-6" value="convex_hull" checked/><label class="form-check-label" for="formCheck-1">Convex Hull</label></div>
+            <div class="form-check" style="margin-left: 57px;margin-top: 0;"><input class="form-check-input" name="algorithm" type="radio" id="formCheck-4" value="clear-border" checked/><label class="form-check-label" for="formCheck-1">Clear Border</label></div>
+            <div class="form-check" style="margin-left: 57px;margin-top: 0;"><input class="form-check-input" name="algorithm" type="radio" id="formCheck-7" value="img_fill" checked/><label class="form-check-label" for="formCheck-1">Image Fill</label></div>
+            <ul>
+                <li>ImageSegmentation.jl</li>
+            </ul>
+            <div class="form-check" style="margin-left: 57px;margin-top: -15px;"><input class="form-check-input" type="radio" id="formCheck-11"><label class="form-check-label" for="formCheck-1">Erosion</label></div>
+            <div class="form-check" style="margin-left: 57px;margin-top: 0;"><input class="form-check-input" type="radio" id="formCheck-10"><label class="form-check-label" for="formCheck-1">Image Fill</label></div>
+            <div class="form-check" style="margin-left: 57px;margin-top: 0;"><input class="form-check-input" type="radio" id="formCheck-9"><label class="form-check-label" for="formCheck-1">Image Fill</label></div>
+            <div class="form-check" style="margin-left: 57px;margin-top: 0;"><input class="form-check-input" type="radio" id="formCheck-8"><label class="form-check-label" for="formCheck-1">Image Fill</label></div>
+
+        </div>
+
+        <p><input type="file" accept="image/*" name="image" id="file"></p>
+
+    </div>
+    <!-- <% img %> -->
+    <!-- <input type="radio" name="algorithm" value="otsu" checked/>Otsu<br/>
+    <input type="radio" name="algorithm" value="unimodal" checked/>Unimodal<br/>
+    <input type="radio" name="algorithm" value="minimum" checked/>Minimum<br/> -->
+
+
+
+    <input type="submit" value="Threshold Image" />
+</form>

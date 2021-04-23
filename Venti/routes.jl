@@ -1,9 +1,13 @@
 using Genie.Router
 using Genie.Renderer
 using Genie.Renderer.Html
-using ImagersController
+using VentisController
 
-route("/", ImagersController.billgatesbooks)
+
+route("/", VentisController.billgatesbooks, method = POST,named = :index)
+
+# route("/bgbooks", VentisController.billgatesbooks,method = POST,named = :index1)
+
 # route("/bgbooks", BooksController.billgatesbooks)
 
 # route("/") do
@@ -11,10 +15,10 @@ route("/", ImagersController.billgatesbooks)
 # end
 
 # routes.jl
-route("/hello") do
-  "Welcome to Genie!"
-end
+# route("/hello") do
+#   "Welcome to Genie!"
+# end
 
-route("/upload_img", ImagersController.upload_img)
+# route("/upload_img", VentisController.upload_img)
 
-route("/threshold", ImagersController.threshold, method = POST, named = :threshold_img)
+# route("/threshold", VentisController.threshold, method = POST, named = :threshold_img)
